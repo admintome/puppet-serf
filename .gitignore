@@ -1,0 +1,4 @@
+file/.empty
+file/oskey.pem
+terraform.tfstate
+terraform.tfstate.backup

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/opt/puppetrun.sh $>/dev/null $disown
+
+echo "Starting Puppet Run"

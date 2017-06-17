@@ -1,0 +1,11 @@
+[Unit]
+Description=Serf
+Documentation=https://www.serf.io/docs/
+
+[Service]
+ExecStart=/usr/local/bin/serf agent -node=agent-01 -iface=eth0 -join=${serf_server_ip}
+ExecReload=/bin/kill -HUP $MAINPID
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Serf
+Documentation=https://www.serf.io/docs/
+
+[Service]
+ExecStart=/usr/local/bin/serf agent -iface=ens3 -node=puppet
+ExecReload=/bin/kill -HUP $MAINPID
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
